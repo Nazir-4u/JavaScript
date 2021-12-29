@@ -1,0 +1,47 @@
+var arr1=[-3,-5,-3,-1,0,1,2,3,4,6]
+
+arr1.sort(function(a,b){
+  return a-b;
+});
+
+function SumOfZero(arr)
+{
+  var left=0;
+  var right=arr.length-1;
+  
+  while(left<right)
+  {
+     sum=arr[left]+arr[right]
+   
+   //console.log(sum)
+   
+  if(sum===0)
+  {
+    //console.log(arr[left] + '' + arr[right])
+    return arr[left] + ',' + arr[right]
+  }
+  else if(sum>0)
+  {
+     //console.log(arr[left] + arr[right])
+    right--;
+  }
+  else
+  {
+    left++;
+  }
+  }
+  
+ 
+
+}
+
+
+const res=SumOfZero(arr1)
+
+console.log('sum of first pair of Array is :',res)
+
+
+
+
+
+
